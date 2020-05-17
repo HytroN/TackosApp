@@ -1,5 +1,5 @@
+import 'package:TackosApp/bmiberegner/input_page/input_page.dart';
 import 'package:TackosApp/screens/auth_screen.dart';
-import 'package:TackosApp/screens/chat_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
         stream: FirebaseAuth.instance.onAuthStateChanged,
         builder: (ctx, userSnapshot) {
           if (userSnapshot.hasData) {
-            return ChatScreen();
+            return InputPage();
           }
           return AuthScreen();
         },
