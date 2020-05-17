@@ -13,7 +13,8 @@ For at installere og køre Flutter skal dit udviklingsmiljø opfylde disse minds
 * Værktøjer: Flutter afhænger af, at disse værktøjer er tilgængelige i dit miljø.
   - Windows PowerShell 5.0 eller nyere (Dette er allerede installeret med Windows 10)
   - 2.x med indstillingen Brug Git fra Windows Command Prompt.
-  - > Hvis Git for Windows allerede er installeret, skal du sørge for at køre git-kommandoer fra kommandoprompten eller PowerShell.
+
+> Hvis Git for Windows allerede er installeret, skal du sørge for at køre git-kommandoer fra kommandoprompten eller PowerShell.
 
 ## Download Flutter
 1. Download følgende installationspakke for at få den seneste stabile udgivelse af Flutter SDK: [Download Flutter](https://storage.googleapis.com/flutter_infra/releases/stable/windows/flutter_windows_1.17.1-stable.zip)
