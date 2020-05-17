@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1010860818125",
+    "firebase_url": "https://tackosapp-d7fd6.firebaseio.com",
+    "project_id": "tackosapp-d7fd6",
+    "storage_bucket": "tackosapp-d7fd6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1010860818125:android:9278b15323e4c37606f384",
+        "android_client_info": {
+          "package_name": "com.example.TackosApp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1010860818125-70u32c5i30hf9r6sk47d59tqofmrtk3i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBlWxifCNiMsPmmZc9uNEfmni4S6AgHkTw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1010860818125-70u32c5i30hf9r6sk47d59tqofmrtk3i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
