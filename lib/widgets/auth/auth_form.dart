@@ -1,4 +1,4 @@
-import 'package:TackosApp/widgets/auth/show_logo.dart';
+// import 'package:TackosApp/widgets/auth/show_logo.dart';
 import 'package:flutter/material.dart';
 
 class AuthForm extends StatefulWidget {

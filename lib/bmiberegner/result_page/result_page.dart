@@ -19,7 +19,10 @@ class _ResultPageState extends State<ResultPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.orange[500],
+        iconTheme: IconThemeData(
+          color: Colors.white, //change your color here
+        ),
+        backgroundColor: Colors.orange[700],
         elevation: 6,
         centerTitle: true,
         title: Text(
@@ -65,20 +68,21 @@ class _ResultPageState extends State<ResultPage> {
             ),
           ),
           Container(
-              height: 52.0,
-              width: 80.0,
-              child: RaisedButton(
-                child: Icon(
-                  Icons.refresh,
-                  color: Colors.white,
-                  size: 28.0,
-                ),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(6.0),
-                ),
-                onPressed: () => Navigator.of(context).pop(),
-                color: Colors.orange,
-              )),
+            height: 52.0,
+            width: 80.0,
+            child: RaisedButton(
+              child: Icon(
+                Icons.refresh,
+                color: Colors.white,
+                size: 28.0,
+              ),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(6.0),
+              ),
+              onPressed: () => Navigator.of(context).pop(),
+              color: Colors.orange,
+            ),
+          ),
           Padding(
             padding: const EdgeInsets.only(left: 40.0),
             child: IconButton(

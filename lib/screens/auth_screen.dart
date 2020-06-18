@@ -45,7 +45,7 @@ class _AuthScreenState extends State<AuthScreen> {
         });
       }
     } on PlatformException catch (err) {
-      var message = 'An error occurred, please check your credentials!';
+      var message = 'Der opstod en fejl. Kontroller venligst dine fejl!';
 
       if (err.message != null) {
         message = err.message;
@@ -55,6 +55,7 @@ class _AuthScreenState extends State<AuthScreen> {
         SnackBar(
           content: Text(message),
           backgroundColor: Theme.of(ctx).errorColor,
+          behavior: SnackBarBehavior.floating,
         ),
       );
       setState(() {
