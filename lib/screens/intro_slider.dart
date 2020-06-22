@@ -1,19 +1,7 @@
-import 'package:TackosApp/screens/auth_screen.dart';
+import 'package:TackosApp/main.dart';
 import 'package:flutter/material.dart';
 import 'package:intro_slider/intro_slider.dart';
 import 'package:intro_slider/slide_object.dart';
-
-//import 'package:intro_slider_example/home.dart';
-
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: IntroScreen(),
-      debugShowCheckedModeBanner: false,
-    );
-  }
-}
 
 class IntroScreen extends StatefulWidget {
   IntroScreen({Key key}) : super(key: key);
@@ -67,7 +55,7 @@ class IntroScreenState extends State<IntroScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return new IntroSlider(
+    return IntroSlider(
       slides: this.slides,
       nameSkipBtn: 'SKIP',
       nameDoneBtn: 'OPRET',
@@ -76,7 +64,7 @@ class IntroScreenState extends State<IntroScreen> {
       onDonePress: () {
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => AuthScreen()),
+          MaterialPageRoute(builder: (context) => AuthScreenPage()),
         );
       },
     );

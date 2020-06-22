@@ -32,6 +32,9 @@ dependencies:
   firebase_auth: ^0.16.0
   flutter_svg: ^0.17.4
   intro_slider: ^2.3.1
+  shared_preferences: ^0.5.7+3
+  after_layout: ^1.0.7+2
+bottom_navy_bar: ^5.4.0
 
 dev_dependencies:
   flutter_test:

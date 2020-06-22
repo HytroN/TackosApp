@@ -36,10 +36,6 @@
         "source": "C:\\Users\\HytroN\\.gradle\\caches\\transforms-2\\files-2.1\\6eb14f512292913515d869914807ad40\\play-services-base-17.1.0\\res\\drawable\\common_google_signin_btn_text_disabled.xml"
     },
     {
-        "merged": "D:\\flutterproject\\TackosApp\\build\\app\\intermediates\\res\\merged\\debug\\drawable-watch-v20_common_google_signin_btn_text_dark_normal.xml.flat",
-        "source": "C:\\Users\\HytroN\\.gradle\\caches\\transforms-2\\files-2.1\\af29e8b0175a30fbaef90a133290de4e\\play-services-auth-18.0.0\\res\\drawable-watch-v20\\common_google_signin_btn_text_dark_normal.xml"
-    },
-    {
         "merged": "D:\\flutterproject\\TackosApp\\build\\app\\intermediates\\res\\merged\\debug\\color_common_google_signin_btn_text_dark.xml.flat",
         "source": "C:\\Users\\HytroN\\.gradle\\caches\\transforms-2\\files-2.1\\6eb14f512292913515d869914807ad40\\play-services-base-17.1.0\\res\\color\\common_google_signin_btn_text_dark.xml"
     },
@@ -132,10 +128,6 @@
         "source": "C:\\Users\\HytroN\\.gradle\\caches\\transforms-2\\files-2.1\\3aaf6e5219b7f981ec263df919098c6f\\core-1.1.0\\res\\drawable\\notification_bg.xml"
     },
     {
-        "merged": "D:\\flutterproject\\TackosApp\\build\\app\\intermediates\\res\\merged\\debug\\drawable-watch-v20_common_google_signin_btn_text_disabled.xml.flat",
-        "source": "C:\\Users\\HytroN\\.gradle\\caches\\transforms-2\\files-2.1\\af29e8b0175a30fbaef90a133290de4e\\play-services-auth-18.0.0\\res\\drawable-watch-v20\\common_google_signin_btn_text_disabled.xml"
-    },
-    {
         "merged": "D:\\flutterproject\\TackosApp\\build\\app\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_common_google_signin_btn_icon_light_normal_background.9.png.flat",
         "source": "C:\\Users\\HytroN\\.gradle\\caches\\transforms-2\\files-2.1\\6eb14f512292913515d869914807ad40\\play-services-base-17.1.0\\res\\drawable-hdpi-v4\\common_google_signin_btn_icon_light_normal_background.9.png"
     },
@@ -162,10 +154,6 @@
     {
         "merged": "D:\\flutterproject\\TackosApp\\build\\app\\intermediates\\res\\merged\\debug\\drawable_common_google_signin_btn_text_light_normal.xml.flat",
         "source": "C:\\Users\\HytroN\\.gradle\\caches\\transforms-2\\files-2.1\\6eb14f512292913515d869914807ad40\\play-services-base-17.1.0\\res\\drawable\\common_google_signin_btn_text_light_normal.xml"
-    },
-    {
-        "merged": "D:\\flutterproject\\TackosApp\\build\\app\\intermediates\\res\\merged\\debug\\drawable-watch-v20_common_google_signin_btn_text_light_normal.xml.flat",
-        "source": "C:\\Users\\HytroN\\.gradle\\caches\\transforms-2\\files-2.1\\af29e8b0175a30fbaef90a133290de4e\\play-services-auth-18.0.0\\res\\drawable-watch-v20\\common_google_signin_btn_text_light_normal.xml"
     },
     {
         "merged": "D:\\flutterproject\\TackosApp\\build\\app\\intermediates\\res\\merged\\debug\\drawable_common_google_signin_btn_text_light.xml.flat",
