@@ -50,6 +50,10 @@ class InputPageState extends State<InputPage> with TickerProviderStateMixin {
         Scaffold(
           backgroundColor: Colors.orange[400],
           appBar: AppBar(
+            backgroundColor: Colors.orange[700],
+            iconTheme: IconThemeData(
+              color: Colors.white, //change your color here
+            ),
             centerTitle: true,
             title: Text(
               'Tackos Motion',

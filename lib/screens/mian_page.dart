@@ -1,3 +1,5 @@
+import 'package:TackosApp/bmiberegner/input_page/input_page.dart';
+import 'package:TackosApp/screens/otherpages.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -10,6 +12,9 @@ class MainPage extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.orange[700],
         centerTitle: true,
+        iconTheme: IconThemeData(
+          color: Colors.white, //change your color here
+        ),
         title: Text(
           'DASHBOARD',
           style: TextStyle(
@@ -51,6 +56,55 @@ class MainPage extends StatelessWidget {
           ),
         ],
       ),
+      drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: <Widget>[
+            UserAccountsDrawerHeader(
+              accountName: Text(
+                'Test Test',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 18.0,
+                ),
+              ),
+              accountEmail: Text(
+                'test@test.com',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 14.0,
+                ),
+              ),
+              currentAccountPicture: CircleAvatar(
+                backgroundColor: Colors.white,
+                child: Text(
+                  "T",
+                  style: TextStyle(fontSize: 40.0),
+                ),
+              ),
+            ),
+            ListTile(
+              leading: Icon(Icons.account_circle),
+              title: Text('Profil'),
+              onTap: () {},
+            ),
+            ListTile(
+              leading: Icon(Icons.settings),
+              title: Text('Indstillinger'),
+              onTap: () {},
+            ),
+            ListTile(
+              leading: Icon(Icons.exit_to_app),
+              title: Text('Log ud'),
+              // onTap: (itemIdentifier) {
+              //   if (itemIdentifier == 'logout') {
+              //     FirebaseAuth.instance.signOut();
+              //   }
+              // },
+            ),
+          ],
+        ),
+      ),
       body: Column(
         children: <Widget>[
           Row(
@@ -60,7 +114,7 @@ class MainPage extends StatelessWidget {
                 child: Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(40, 20, 40, 20),
                   child: Container(
-                    width: 100.0,
+                    width: 125.0,
                     height: 125.0,
                     decoration: BoxDecoration(
                       image: DecorationImage(
@@ -79,62 +133,41 @@ class MainPage extends StatelessWidget {
           Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              Expanded(
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => SportRun()),
+                  );
+                },
                 child: Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(40, 5, 20, 0),
+                  padding: EdgeInsetsDirectional.fromSTEB(40, 5, 30, 0),
                   child: Container(
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
+                      borderRadius: BorderRadius.circular(5),
                       color: Colors.white,
+                      image: DecorationImage(
+                        image: AssetImage('images/sportrun.png'),
+                      ),
                     ),
-                    width: 75.0,
+                    width: 125.0,
                     height: 125.0,
                     // decoration: BoxDecoration(image: DecorationImage(image: ),),
                   ),
                 ),
               ),
-              Expanded(
+              GestureDetector(
                 child: Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(20, 5, 40, 0),
+                  padding: EdgeInsetsDirectional.fromSTEB(50, 5, 40, 0),
                   child: Container(
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
+                      borderRadius: BorderRadius.circular(5),
                       color: Colors.white,
+                      image: DecorationImage(
+                        image: AssetImage('images/walking.png'),
+                      ),
                     ),
-                    width: 75.0,
-                    height: 125.0,
-                    // decoration: BoxDecoration(image: DecorationImage(image: ),),
-                  ),
-                ),
-              ),
-            ],
-          ),
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: <Widget>[
-              Expanded(
-                child: Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(40, 10, 20, 0),
-                  child: Container(
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      color: Colors.white,
-                    ),
-                    width: 75.0,
-                    height: 125.0,
-                    // decoration: BoxDecoration(image: DecorationImage(image: ),),
-                  ),
-                ),
-              ),
-              Expanded(
-                child: Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(20, 10, 40, 0),
-                  child: Container(
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      color: Colors.white,
-                    ),
-                    width: 75.0,
+                    width: 125.0,
                     height: 125.0,
                     // decoration: BoxDecoration(image: DecorationImage(image: ),),
                   ),
@@ -145,35 +178,92 @@ class MainPage extends StatelessWidget {
           Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              Expanded(
+              GestureDetector(
                 child: Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(40, 10, 20, 0),
+                  padding: EdgeInsetsDirectional.fromSTEB(40, 10, 30, 0),
                   child: Container(
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
+                      borderRadius: BorderRadius.circular(5),
+                      color: Colors.white,
+                      image: DecorationImage(
+                        image: AssetImage('images/gymnastics.png'),
+                      ),
+                    ),
+                    width: 125.0,
+                    height: 125.0,
+                    // decoration: BoxDecoration(image: DecorationImage(image: ),),
+                  ),
+                ),
+              ),
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => InputPage()),
+                  );
+                },
+                child: Padding(
+                  padding: EdgeInsetsDirectional.fromSTEB(50, 10, 40, 0),
+                  child: Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(5),
+                      color: Colors.white,
+                      image: DecorationImage(
+                        image: AssetImage('images/scale.png'),
+                      ),
+                    ),
+                    width: 125.0,
+                    height: 125.0,
+                    // decoration: BoxDecoration(image: DecorationImage(image: ),),
+                  ),
+                ),
+              ),
+            ],
+          ),
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Exercise()),
+                  );
+                },
+                child: Padding(
+                  padding: EdgeInsetsDirectional.fromSTEB(40, 10, 30, 0),
+                  child: Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(5),
                       color: Colors.white,
                       image: DecorationImage(
                         image: AssetImage('images/barbell.png'),
                       ),
                     ),
-                    width: 75.0,
+                    width: 125.0,
                     height: 125.0,
                     // decoration: BoxDecoration(image: DecorationImage(image: ),),
                   ),
                 ),
               ),
-              Expanded(
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => LeaderBoard()),
+                  );
+                },
                 child: Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(20, 10, 40, 0),
+                  padding: EdgeInsetsDirectional.fromSTEB(50, 10, 40, 0),
                   child: Container(
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
+                      borderRadius: BorderRadius.circular(5),
                       color: Colors.white,
                       image: DecorationImage(
-                        image: AssetImage('images/danica.png'),
+                        image: AssetImage('images/leaderboard.png'),
                       ),
                     ),
-                    width: 75.0,
+                    width: 125.0,
                     height: 125.0,
                     // decoration: BoxDecoration(image: DecorationImage(image: ),),
                   ),

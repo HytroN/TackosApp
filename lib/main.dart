@@ -1,5 +1,5 @@
 // import 'package:TackosApp/bmiberegner/input_page/input_page.dart';
-import 'package:TackosApp/screens/auth_screen.dart';
+import 'package:TackosApp/screens/intro_slider.dart';
 import 'package:TackosApp/screens/mian_page.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
           if (userSnapshot.hasData) {
             return MainPage();
           }
-          return AuthScreen();
+          return IntroScreen();
         },
       ),
     );
