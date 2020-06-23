@@ -21,38 +21,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       color: Colors.lightBlue,
-      home: FirstTime(),
-    );
-  }
-}
-
-class FirstTime extends StatefulWidget {
-  @override
-  FirstTimeState createState() => FirstTimeState();
-}
-
-class FirstTimeState extends State<FirstTime> with AfterLayoutMixin<FirstTime> {
-  Future checkFirstSeen() async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    bool _seen = (prefs.getBool('seen') ?? false);
-
-    if (_seen) {
-      Navigator.of(context).pushReplacement(
-          MaterialPageRoute(builder: (context) => IntroScreen()));
-    } else {
-      await prefs.setBool('seen', true);
-      Navigator.of(context).pushReplacement(
-          MaterialPageRoute(builder: (context) => AuthScreenPage()));
-    }
-  }
-
-  @override
-  void afterFirstLayout(BuildContext context) => checkFirstSeen();
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.orange[300],
+      home: IntroScreen(),
     );
   }
 }
