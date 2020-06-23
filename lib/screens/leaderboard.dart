@@ -59,7 +59,7 @@ class LeaderBoard extends StatelessWidget {
                       height: 14.0,
                     ),
                     Text(
-                      '\u{1F3C6} 3/6 Præstationsevne',
+                      '\u{1F3C6} 3/6 PRÆSTATIONSEVNE',
                       style: TextStyle(fontWeight: FontWeight.bold),
                     ),
                     Column(
