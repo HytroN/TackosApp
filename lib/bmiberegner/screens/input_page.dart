@@ -226,7 +226,8 @@ class _InputPageState extends State<InputPage> {
                             ),
                           ),
                           Text(
-                            weight.toString(),
+                            weight
+                                .toString(), // Returnerer det tætteste tal, der korrekt repræsenterer inputnummeret.
                             style: TextStyle(
                               fontSize: 50.0,
                               fontWeight: FontWeight.w900,
@@ -247,6 +248,7 @@ class _InputPageState extends State<InputPage> {
                                   });
                                 },
                                 constraints: BoxConstraints.tightFor(
+                                  // Der laver en boks i et given størrelse
                                   width: 56.0,
                                   height: 56.0,
                                 ),
@@ -267,6 +269,7 @@ class _InputPageState extends State<InputPage> {
                                   });
                                 },
                                 constraints: BoxConstraints.tightFor(
+                                  // Der laver en boks i et given størrelse
                                   width: 56.0,
                                   height: 56.0,
                                 ),
@@ -302,7 +305,7 @@ class _InputPageState extends State<InputPage> {
                             ),
                           ),
                           Text(
-                            age.toString(),
+                            age.toString(), // Returnerer det tætteste tal, der korrekt repræsenterer inputnummeret.
                             style: TextStyle(
                               fontSize: 50.0,
                               fontWeight: FontWeight.w900,
@@ -323,6 +326,7 @@ class _InputPageState extends State<InputPage> {
                                   });
                                 },
                                 constraints: BoxConstraints.tightFor(
+                                  // Der laver en boks i et given størrelse
                                   width: 56.0,
                                   height: 56.0,
                                 ),
@@ -343,6 +347,7 @@ class _InputPageState extends State<InputPage> {
                                   });
                                 },
                                 constraints: BoxConstraints.tightFor(
+                                  // Der laver en boks i et given størrelse
                                   width: 56.0,
                                   height: 56.0,
                                 ),
