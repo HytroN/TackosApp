@@ -4,6 +4,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'results_page.dart';
 
 enum Gender {
+  // Enum er en liste. Enum er en class. Enum starter med 0, 1, 2, 3
   male,
   female,
 }
@@ -15,9 +16,9 @@ class InputPage extends StatefulWidget {
 
 class _InputPageState extends State<InputPage> {
   Gender selectedGender;
-  int height = 160;
-  int weight = 40;
-  int age = 14;
+  int height = 160; // hele numre, ingen decimal
+  int weight = 40; // hele numre, ingen decimal
+  int age = 14; // hele numre, ingen decimal
 
   @override
   Widget build(BuildContext context) {
@@ -155,7 +156,8 @@ class _InputPageState extends State<InputPage> {
                       textBaseline: TextBaseline.alphabetic,
                       children: <Widget>[
                         Text(
-                          height.toString(),
+                          height
+                              .toString(), // Returnerer det tætteste tal, der korrekt repræsenterer inputnummeret.
                           style: TextStyle(
                             fontSize: 50.0,
                             fontWeight: FontWeight.w900,
@@ -245,7 +247,6 @@ class _InputPageState extends State<InputPage> {
                                     weight--;
                                   });
                                 },
-                                elevation: 0.0,
                                 constraints: BoxConstraints.tightFor(
                                   width: 56.0,
                                   height: 56.0,
@@ -266,7 +267,6 @@ class _InputPageState extends State<InputPage> {
                                     weight++;
                                   });
                                 },
-                                elevation: 0.0,
                                 constraints: BoxConstraints.tightFor(
                                   width: 56.0,
                                   height: 56.0,
@@ -323,7 +323,6 @@ class _InputPageState extends State<InputPage> {
                                     age--;
                                   });
                                 },
-                                elevation: 0.0,
                                 constraints: BoxConstraints.tightFor(
                                   width: 56.0,
                                   height: 56.0,
@@ -344,7 +343,6 @@ class _InputPageState extends State<InputPage> {
                                     age++;
                                   });
                                 },
-                                elevation: 0.0,
                                 constraints: BoxConstraints.tightFor(
                                   width: 56.0,
                                   height: 56.0,

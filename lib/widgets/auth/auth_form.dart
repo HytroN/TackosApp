@@ -1,19 +1,21 @@
-// import 'package:TackosApp/widgets/auth/show_logo.dart';
 import 'package:flutter/material.dart';
 
 class AuthForm extends StatefulWidget {
   AuthForm(
-    this.submitFn,
+    //Constructor gemmer det i en property
+    this.submitFn, // Det argument vi gemmer er forbundet med functionen nedenfor
     this.isLoading,
   );
 
-  final bool isLoading;
+  final bool isLoading; // Som vi får igennem vores constructor
   final void Function(
+    // Er en funktion som ikke return noget, men en funktion at arguments og parameters, som vi gerne vil gemme
     String email,
     String password,
     String username,
     bool isLogin,
-    BuildContext ctx,
+    BuildContext
+        ctx, // Vi bliver nød til at vidregive context, da vi har adgang til scaffold i authform
   ) submitFn;
 
   @override
@@ -21,24 +23,32 @@ class AuthForm extends StatefulWidget {
 }
 
 class _AuthFormState extends State<AuthForm> {
-  final _formKey = GlobalKey<FormState>();
-  bool isPasswordVisible = false;
-  bool isConfirmPasswordVisible = false;
-  var _isLogin = true;
-  var _userEmail = '';
-  var _userName = '';
-  var _userPassword = '';
+  final _formKey = GlobalKey<
+      FormState>(); // Et FormState-objekt kan bruges til at gemme, nulstille og validere hver FormField, der er efterkommer af den tilknyttede form.
+  bool isPasswordVisible = false; // Sætter vissible to false
+  bool _isLogin = true; // tjekker om man er i login mode eller i sign up mode
+  String _userEmail = '';
+  String _userName = '';
+  String _userPassword = '';
 
   void _trySubmit() {
-    final isValid = _formKey.currentState.validate();
-    FocusScope.of(context).unfocus();
+    // _ definere at det er privat og kun kan bruges i dette dokument
+    final isValid = _formKey.currentState
+        .validate(); // Dette trigger alle TextFormField, der indeholder en validate function
+    FocusScope.of(context)
+        .unfocus(); // Det lukker keyboardet når man har submittet.
 
     if (isValid) {
-      _formKey.currentState.save();
+      // Derefter tjekker om det inputtet er valid
+      _formKey.currentState
+          .save(); // Det tjekker alle TextFormField og gemmer alle onSaved function. Derefter kan vi bruge det til at sende vores auth en request
       widget.submitFn(
-        _userEmail.trim(),
-        _userPassword.trim(),
-        _userName.trim(),
+        _userEmail
+            .trim(), // trim() Fjerne whitespacing | men vidregivere alt information fra funtionen ovenfor
+        _userPassword
+            .trim(), // trim() Fjerne whitespacing | men vidregivere alt information fra funtionen ovenfor
+        _userName
+            .trim(), // trim() Fjerne whitespacing | men vidregivere alt information fra funtionen ovenfor
         _isLogin,
         context,
       );
@@ -78,15 +88,19 @@ class _AuthFormState extends State<AuthForm> {
                 child: Form(
                   key: _formKey,
                   child: Column(
-                    mainAxisSize: MainAxisSize.min,
+                    mainAxisSize: MainAxisSize
+                        .min, // Tager kun den mængde plads som nødvendigt
                     children: <Widget>[
                       if (!_isLogin)
                         Container(
                           child: TextFormField(
-                            key: ValueKey('username'),
-                            keyboardType: TextInputType.text,
+                            key: ValueKey(
+                                'username'), // Husker det specifikke key element, man har skrevet i.
+                            keyboardType: TextInputType
+                                .text, // Begrænse brugeren for keyboard type
                             textInputAction: TextInputAction.next,
                             validator: (value) {
+                              // Validator er en funktion, som tjekker hvad brugeren indtaster
                               if (value.isEmpty || value.length < 4) {
                                 return 'Dit brugernavn skal mindst indeholde 4 tegn';
                               }
@@ -108,7 +122,8 @@ class _AuthFormState extends State<AuthForm> {
                       ),
                       Container(
                         child: TextFormField(
-                          key: ValueKey('email'),
+                          key: ValueKey(
+                              'email'), // Husker det specifikke key element, man har skrevet i.
                           keyboardType: TextInputType.emailAddress,
                           textInputAction: TextInputAction.next,
                           validator: (value) {
@@ -134,10 +149,12 @@ class _AuthFormState extends State<AuthForm> {
                       ),
                       Container(
                         child: TextFormField(
-                          key: ValueKey('password'),
+                          key: ValueKey(
+                              'password'), // Husker det specifikke key element, man har skrevet i.
                           keyboardType: TextInputType.text,
                           textInputAction: TextInputAction.next,
                           validator: (value) {
+                            // "value" er det brugeren indsætter
                             if (value.isEmpty || value.length < 8) {
                               return 'Adgangskoden skal mindst være 8 tegn';
                             }
@@ -167,7 +184,8 @@ class _AuthFormState extends State<AuthForm> {
                       SizedBox(
                         height: 12,
                       ),
-                      if (widget.isLoading) CircularProgressIndicator(),
+                      if (widget.isLoading)
+                        CircularProgressIndicator(), // Loading indicator
                       if (!widget.isLoading)
                         Container(
                           margin: EdgeInsets.only(top: 32.0),
@@ -198,6 +216,7 @@ class _AuthFormState extends State<AuthForm> {
                           ),
                           onPressed: () {
                             setState(() {
+                              // Ved at ændre om man er i sign up mode eller i login mode, bliver vi nød til at lave en setState som ændre i udseendet, når man klikker.
                               _isLogin = !_isLogin;
                             });
                           },

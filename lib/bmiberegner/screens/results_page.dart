@@ -1,14 +1,19 @@
 import 'package:flutter/material.dart';
 
 class ResultsPage extends StatelessWidget {
-  ResultsPage(
-      {@required this.bmiResult,
-      @required this.resultText,
-      @required this.interpret});
+  ResultsPage({
+    //Constructor gemmer det i en property
+    this.bmiResult,
+    this.resultText,
+    this.interpret,
+  });
 
-  final String bmiResult;
-  final String resultText;
-  final String interpret;
+  final String
+      bmiResult; // Det gemmer vi så i en final string da, det ikke skal kunne ændre sig og derfor final
+  final String
+      resultText; // Det gemmer vi så i en final string da, det ikke skal kunne ændre sig og derfor final
+  final String
+      interpret; // Det gemmer vi så i en final string da, det ikke skal kunne ændre sig og derfor final
 
   @override
   Widget build(BuildContext context) {
@@ -41,7 +46,8 @@ class ResultsPage extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: <Widget>[
                     Text(
-                      resultText.toUpperCase(),
+                      resultText
+                          .toUpperCase(), // Der transformer text til uppercase, ligesom i CSS
                       style: TextStyle(
                         color: Color(0xFF24D876),
                         fontSize: 22.0,

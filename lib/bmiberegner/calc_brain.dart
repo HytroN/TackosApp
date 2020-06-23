@@ -1,7 +1,10 @@
 import 'dart:math';
 
 class CalcBrain {
-  CalcBrain({this.height, this.weight});
+  CalcBrain({
+    this.height,
+    this.weight,
+  }); //Constructor gemmer det i en property
 
   final int height;
   final int weight;
@@ -15,11 +18,11 @@ class CalcBrain {
 
   String getResult() {
     if (_bmi >= 25) {
-      return 'Overvægtigig';
+      return 'Overvægtig';
     } else if (_bmi > 18.5) {
-      return 'Normal';
+      return 'Normal vægtig';
     } else {
-      return 'Undervægt';
+      return 'Undervægtig';
     }
   }
 
