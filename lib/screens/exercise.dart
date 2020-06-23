@@ -25,6 +25,33 @@ class SportRun extends StatelessWidget {
 }
 
 class Exercise extends StatelessWidget {
+  showAlertDialog(BuildContext context) {
+    // set up the button
+    Widget okButton = FlatButton(
+      child: null,
+      onPressed: () {
+        return true;
+      },
+    );
+
+    // set up the AlertDialog
+    AlertDialog alert = AlertDialog(
+      title: Text("ERROR-501"),
+      content: Text("Denne funktion er ikke tilgængelig"),
+      actions: [
+        okButton,
+      ],
+    );
+
+    // show the dialog
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return alert;
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -53,7 +80,9 @@ class Exercise extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 GestureDetector(
-                  onTap: () {},
+                  onTap: () {
+                    showAlertDialog(context);
+                  },
                   child: Container(
                     decoration: BoxDecoration(
                       image: DecorationImage(
@@ -73,7 +102,9 @@ class Exercise extends StatelessWidget {
                   width: 50.0,
                 ),
                 GestureDetector(
-                  onTap: () {},
+                  onTap: () {
+                    showAlertDialog(context);
+                  },
                   child: Container(
                     decoration: BoxDecoration(
                       image: DecorationImage(
@@ -97,7 +128,9 @@ class Exercise extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 GestureDetector(
-                  onTap: () {},
+                  onTap: () {
+                    showAlertDialog(context);
+                  },
                   child: Container(
                     decoration: BoxDecoration(
                       image: DecorationImage(
@@ -117,7 +150,9 @@ class Exercise extends StatelessWidget {
                   width: 50.0,
                 ),
                 GestureDetector(
-                  onTap: () {},
+                  onTap: () {
+                    showAlertDialog(context);
+                  },
                   child: Container(
                     decoration: BoxDecoration(
                       image: DecorationImage(
@@ -141,7 +176,9 @@ class Exercise extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 GestureDetector(
-                  onTap: () {},
+                  onTap: () {
+                    showAlertDialog(context);
+                  },
                   child: Container(
                     decoration: BoxDecoration(
                       image: DecorationImage(
@@ -162,8 +199,7 @@ class Exercise extends StatelessWidget {
                 ),
                 GestureDetector(
                   onTap: () {
-                    Navigator.of(context).push(
-                        MaterialPageRoute(builder: (context) => InputPage()));
+                    showAlertDialog(context);
                   },
                   child: Container(
                     decoration: BoxDecoration(
