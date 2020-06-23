@@ -1,177 +1,63 @@
 import 'package:TackosApp/bmiberegner/screens/input_page.dart';
-import 'package:TackosApp/screens/exercise.dart';
 import 'package:TackosApp/screens/leaderboard.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
-class MainPage extends StatefulWidget {
+class SportRun extends StatelessWidget {
   @override
-  _MainPageState createState() => _MainPageState();
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.orange[700],
+        iconTheme: IconThemeData(
+          color: Colors.white, //change your color here
+        ),
+        title: Text(
+          'TRÆNING',
+          style: TextStyle(
+            color: Colors.white,
+            fontWeight: FontWeight.w900,
+          ),
+        ),
+        centerTitle: true,
+      ),
+    );
+  }
 }
 
-class _MainPageState extends State<MainPage> {
-  FirebaseUser currentUser;
-
-  @override
-  void initState() {
-    super.initState();
-    _loadCurrentUser();
-  }
-
-  void _loadCurrentUser() {
-    FirebaseAuth.instance.currentUser().then((FirebaseUser user) {
-      setState(() {
-        // Kalder setState til at genbygge udseendet
-        this.currentUser = user;
-      });
-    });
-  }
-
-  String _email() {
-    if (currentUser != null) {
-      //Tjekker om currentUser ikke er i ligemed null, derfor skal den return den email currentuser logger ind med.
-      return currentUser.email;
-    } else {
-      return "Ingen bruger";
-    }
-  }
-
-  showAlertDialog(BuildContext context) {
-    // set up the button
-    Widget okButton = FlatButton(
-      child: null,
-      onPressed: () {
-        return true;
-      },
-    );
-
-    // set up the AlertDialog
-    AlertDialog alert = AlertDialog(
-      title: Text("ERROR-501"),
-      content: Text("Denne funktion er ikke tilgængelig"),
-      actions: [
-        okButton,
-      ],
-    );
-
-    // show the dialog
-    showDialog(
-      context: context,
-      builder: (BuildContext context) {
-        return alert;
-      },
-    );
-  }
-
+class Exercise extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.orange[400],
       appBar: AppBar(
         backgroundColor: Colors.orange[700],
-        centerTitle: true,
         iconTheme: IconThemeData(
-          color: Colors.white,
+          color: Colors.white, //change your color here
         ),
         title: Text(
-          'DASHBOARD',
+          'TRÆNING',
           style: TextStyle(
             color: Colors.white,
             fontWeight: FontWeight.w900,
           ),
         ),
-      ),
-      drawer: Drawer(
-        child: ListView(
-          padding: EdgeInsets.zero,
-          children: <Widget>[
-            UserAccountsDrawerHeader(
-              accountName: Text(
-                'Noobmaster69',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 18.0,
-                ),
-              ),
-              accountEmail: Text(
-                _email(),
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 14.0,
-                ),
-              ),
-              currentAccountPicture: CircleAvatar(
-                radius: 50.0,
-                backgroundImage: NetworkImage(
-                  'https://www.healthykids.org/_img2017/kid07.jpg',
-                ),
-              ),
-            ),
-            ListTile(
-              leading: Icon(Icons.add),
-              title: Text('Tilføj en ven'),
-              onTap: () {},
-            ),
-            ListTile(
-              leading: Icon(Icons.supervisor_account),
-              title: Text('Venneliste'),
-              onTap: () {},
-            ),
-            ListTile(
-              leading: Icon(Icons.settings),
-              title: Text('Indstillinger'),
-              onTap: () {},
-            ),
-            ListTile(
-              leading: Icon(Icons.exit_to_app),
-              title: Text('Log ud'),
-              onTap: () {
-                FirebaseAuth.instance.signOut();
-              },
-            ),
-          ],
-        ),
+        centerTitle: true,
       ),
       body: Column(
         children: <Widget>[
           SizedBox(
-            height: 10.0,
-          ),
-          Expanded(
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                Container(
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                      image: NetworkImage('https://i.gifer.com/7hhR.gif'),
-                      fit: BoxFit.fitWidth,
-                    ),
-                    color: Colors.white,
-                    borderRadius: BorderRadius.all(Radius.circular(15.0)),
-                    boxShadow: [
-                      BoxShadow(color: Colors.black26, blurRadius: 15.0)
-                    ],
-                  ),
-                  height: 125.0,
-                  width: 250.0,
-                ),
-              ],
-            ),
+            height: 6.0,
           ),
           Expanded(
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 GestureDetector(
-                  onTap: () {
-                    showAlertDialog(context);
-                  },
+                  onTap: () {},
                   child: Container(
                     decoration: BoxDecoration(
                       image: DecorationImage(
-                        image: AssetImage('images/sportrun.png'),
+                        image: AssetImage('images/chest.png'),
                       ),
                       color: Colors.white,
                       borderRadius: BorderRadius.all(Radius.circular(15.0)),
@@ -187,13 +73,11 @@ class _MainPageState extends State<MainPage> {
                   width: 50.0,
                 ),
                 GestureDetector(
-                  onTap: () {
-                    showAlertDialog(context);
-                  },
+                  onTap: () {},
                   child: Container(
                     decoration: BoxDecoration(
                       image: DecorationImage(
-                        image: AssetImage('images/walking.png'),
+                        image: AssetImage('images/biceps.png'),
                       ),
                       color: Colors.white,
                       borderRadius: BorderRadius.all(Radius.circular(15.0)),
@@ -213,13 +97,55 @@ class _MainPageState extends State<MainPage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 GestureDetector(
-                  onTap: () {
-                    showAlertDialog(context);
-                  },
+                  onTap: () {},
                   child: Container(
                     decoration: BoxDecoration(
                       image: DecorationImage(
-                        image: AssetImage('images/gymnastics.png'),
+                        image: AssetImage('images/shoulders.png'),
+                      ),
+                      color: Colors.white,
+                      borderRadius: BorderRadius.all(Radius.circular(15.0)),
+                      boxShadow: [
+                        BoxShadow(color: Colors.black26, blurRadius: 5.0)
+                      ],
+                    ),
+                    height: 100.0,
+                    width: 100.0,
+                  ),
+                ),
+                SizedBox(
+                  width: 50.0,
+                ),
+                GestureDetector(
+                  onTap: () {},
+                  child: Container(
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                        image: AssetImage('images/prelum.png'),
+                      ),
+                      color: Colors.white,
+                      borderRadius: BorderRadius.all(Radius.circular(15.0)),
+                      boxShadow: [
+                        BoxShadow(color: Colors.black26, blurRadius: 5.0)
+                      ],
+                    ),
+                    height: 100.0,
+                    width: 100.0,
+                  ),
+                ),
+              ],
+            ),
+          ),
+          Expanded(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                GestureDetector(
+                  onTap: () {},
+                  child: Container(
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                        image: AssetImage('images/calves.png'),
                       ),
                       color: Colors.white,
                       borderRadius: BorderRadius.all(Radius.circular(15.0)),
@@ -242,57 +168,7 @@ class _MainPageState extends State<MainPage> {
                   child: Container(
                     decoration: BoxDecoration(
                       image: DecorationImage(
-                        image: AssetImage('images/scale.png'),
-                      ),
-                      color: Colors.white,
-                      borderRadius: BorderRadius.all(Radius.circular(15.0)),
-                      boxShadow: [
-                        BoxShadow(color: Colors.black26, blurRadius: 5.0)
-                      ],
-                    ),
-                    height: 100.0,
-                    width: 100.0,
-                  ),
-                ),
-              ],
-            ),
-          ),
-          Expanded(
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                GestureDetector(
-                  onTap: () {
-                    Navigator.of(context).push(
-                        MaterialPageRoute(builder: (context) => Exercise()));
-                  },
-                  child: Container(
-                    decoration: BoxDecoration(
-                      image: DecorationImage(
-                        image: AssetImage('images/barbell.png'),
-                      ),
-                      color: Colors.white,
-                      borderRadius: BorderRadius.all(Radius.circular(15.0)),
-                      boxShadow: [
-                        BoxShadow(color: Colors.black26, blurRadius: 5.0)
-                      ],
-                    ),
-                    height: 100.0,
-                    width: 100.0,
-                  ),
-                ),
-                SizedBox(
-                  width: 50.0,
-                ),
-                GestureDetector(
-                  onTap: () {
-                    Navigator.of(context).push(
-                        MaterialPageRoute(builder: (context) => LeaderBoard()));
-                  },
-                  child: Container(
-                    decoration: BoxDecoration(
-                      image: DecorationImage(
-                        image: AssetImage('images/leaderboard.png'),
+                        image: AssetImage('images/hamstrings.png'),
                       ),
                       color: Colors.white,
                       borderRadius: BorderRadius.all(Radius.circular(15.0)),

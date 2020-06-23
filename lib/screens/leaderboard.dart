@@ -251,7 +251,7 @@ class LeaderBoard extends StatelessWidget {
                                                         child: CircleAvatar(
                                                           backgroundImage:
                                                               NetworkImage(
-                                                            'https://www.ing.com/upload_mm/1/c/3/70a5f93f-90ba-4db0-9765-24835031270b_Erion-Nalli_1200x675_500x281.png',
+                                                            'https://cdn.discordapp.com/attachments/724625186111881236/724999291072020551/unknown.png',
                                                           ),
                                                           radius: 20,
                                                         ),
