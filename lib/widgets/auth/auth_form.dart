@@ -67,7 +67,11 @@ class _AuthFormState extends State<AuthForm> {
         ),
         Center(
           child: Card(
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(15.0),
+            ),
             margin: EdgeInsets.all(20),
+            elevation: 10,
             child: SingleChildScrollView(
               child: Padding(
                 padding: EdgeInsets.all(16),
@@ -91,13 +95,17 @@ class _AuthFormState extends State<AuthForm> {
                             decoration: InputDecoration(
                               labelText: 'Brugernavn',
                               //prefixIcon: Icon(Icons.email),
-                              icon: Icon(Icons.perm_identity),
+                              prefixIcon: Icon(Icons.perm_identity),
+                              border: OutlineInputBorder(),
                             ),
                             onSaved: (value) {
                               _userName = value; // Gemmer brugernavnet
                             },
                           ),
                         ),
+                      SizedBox(
+                        height: 12,
+                      ),
                       Container(
                         child: TextFormField(
                           key: ValueKey('email'),
@@ -113,12 +121,16 @@ class _AuthFormState extends State<AuthForm> {
                           decoration: InputDecoration(
                             labelText: 'Email',
                             //prefixIcon: Icon(Icons.email),
-                            icon: Icon(Icons.email),
+                            prefixIcon: Icon(Icons.email),
+                            border: OutlineInputBorder(),
                           ),
                           onSaved: (value) {
                             _userEmail = value; // Gemmer emailen
                           },
                         ),
+                      ),
+                      SizedBox(
+                        height: 12,
                       ),
                       Container(
                         child: TextFormField(
@@ -144,7 +156,8 @@ class _AuthFormState extends State<AuthForm> {
                                 });
                               },
                             ),
-                            icon: Icon(Icons.vpn_key),
+                            prefixIcon: Icon(Icons.vpn_key),
+                            border: OutlineInputBorder(),
                           ),
                           onSaved: (value) {
                             _userPassword = value; // Gemmer Password
@@ -158,7 +171,7 @@ class _AuthFormState extends State<AuthForm> {
                       if (!widget.isLoading)
                         Container(
                           margin: EdgeInsets.only(top: 32.0),
-                          width: double.infinity,
+                          width: 260.0,
                           child: RaisedButton(
                             color: Colors.orange,
                             textColor: Colors.white,
@@ -171,13 +184,13 @@ class _AuthFormState extends State<AuthForm> {
                             ),
                             onPressed: _trySubmit,
                             shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(5.0),
+                              borderRadius: BorderRadius.circular(10.0),
                             ),
                           ),
                         ),
                       if (!widget.isLoading)
                         FlatButton(
-                          textColor: Colors.orange,
+                          textColor: Colors.grey,
                           child: Text(
                             _isLogin
                                 ? 'Opret en konto'

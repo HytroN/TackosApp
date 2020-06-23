@@ -1,10 +1,69 @@
-import 'package:TackosApp/bmiberegner/input_page/input_page.dart';
+import 'package:TackosApp/bmiberegner/screens/input_page.dart';
+import 'package:TackosApp/screens/leaderboard.dart';
 import 'package:TackosApp/screens/otherpages.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
-class MainPage extends StatelessWidget {
+class MainPage extends StatefulWidget {
+  @override
+  _MainPageState createState() => _MainPageState();
+}
+
+class _MainPageState extends State<MainPage> {
+  FirebaseUser currentUser;
+
+  @override
+  void initState() {
+    super.initState();
+    _loadCurrentUser();
+  }
+
+  void _loadCurrentUser() {
+    FirebaseAuth.instance.currentUser().then((FirebaseUser user) {
+      setState(() {
+        // Kalder setState til at genbygge udseendet
+        this.currentUser = user;
+      });
+    });
+  }
+
+  String _email() {
+    if (currentUser != null) {
+      //Tjekker om currentUser ikke er i ligemed null, derfor skal den return den email currentuser logger ind med.
+      return currentUser.email;
+    } else {
+      return "Ingen bruger";
+    }
+  }
+
+  showAlertDialog(BuildContext context) {
+    // set up the button
+    Widget okButton = FlatButton(
+      child: null,
+      onPressed: () {
+        return true;
+      },
+    );
+
+    // set up the AlertDialog
+    AlertDialog alert = AlertDialog(
+      title: Text("ERROR-501"),
+      content: Text("Denne funktion er ikke tilgængelig"),
+      actions: [
+        okButton,
+      ],
+    );
+
+    // show the dialog
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return alert;
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -13,7 +72,7 @@ class MainPage extends StatelessWidget {
         backgroundColor: Colors.orange[700],
         centerTitle: true,
         iconTheme: IconThemeData(
-          color: Colors.white, //change your color here
+          color: Colors.white,
         ),
         title: Text(
           'DASHBOARD',
@@ -22,39 +81,6 @@ class MainPage extends StatelessWidget {
             fontWeight: FontWeight.w900,
           ),
         ),
-        actions: <Widget>[
-          DropdownButton(
-            icon: Icon(
-              Icons.face,
-              color: Colors.white,
-            ),
-            items: [
-              DropdownMenuItem(
-                child: Container(
-                  child: Row(
-                    children: <Widget>[
-                      Icon(
-                        Icons.exit_to_app,
-                      ),
-                      SizedBox(
-                        width: 8,
-                      ),
-                      Text(
-                        'Log ud',
-                      ),
-                    ],
-                  ),
-                ),
-                value: 'logout',
-              ),
-            ],
-            onChanged: (itemIdentifier) {
-              if (itemIdentifier == 'logout') {
-                FirebaseAuth.instance.signOut();
-              }
-            },
-          ),
-        ],
       ),
       drawer: Drawer(
         child: ListView(
@@ -62,30 +88,34 @@ class MainPage extends StatelessWidget {
           children: <Widget>[
             UserAccountsDrawerHeader(
               accountName: Text(
-                'Test Test',
+                'Noobmaster69',
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 18.0,
                 ),
               ),
               accountEmail: Text(
-                'test@test.com',
+                _email(),
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 14.0,
                 ),
               ),
               currentAccountPicture: CircleAvatar(
-                backgroundColor: Colors.white,
-                child: Text(
-                  "T",
-                  style: TextStyle(fontSize: 40.0),
+                radius: 50.0,
+                backgroundImage: NetworkImage(
+                  'https://www.healthykids.org/_img2017/kid07.jpg',
                 ),
               ),
             ),
             ListTile(
-              leading: Icon(Icons.account_circle),
-              title: Text('Profil'),
+              leading: Icon(Icons.add),
+              title: Text('Tilføj en ven'),
+              onTap: () {},
+            ),
+            ListTile(
+              leading: Icon(Icons.supervisor_account),
+              title: Text('Venneliste'),
               onTap: () {},
             ),
             ListTile(
@@ -96,181 +126,187 @@ class MainPage extends StatelessWidget {
             ListTile(
               leading: Icon(Icons.exit_to_app),
               title: Text('Log ud'),
-              // onTap: (itemIdentifier) {
-              //   if (itemIdentifier == 'logout') {
-              //     FirebaseAuth.instance.signOut();
-              //   }
-              // },
+              onTap: () {
+                FirebaseAuth.instance.signOut();
+              },
             ),
           ],
         ),
       ),
       body: Column(
         children: <Widget>[
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: <Widget>[
-              Expanded(
-                child: Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(40, 20, 40, 20),
-                  child: Container(
-                    width: 125.0,
-                    height: 125.0,
-                    decoration: BoxDecoration(
-                      image: DecorationImage(
-                        image: NetworkImage(
-                            'https://www.techlicious.com/images/phones/girl-using-smartphone-700px.jpg'),
-                        fit: BoxFit.fill,
-                      ),
-                      border:
-                          Border.all(color: Colors.orange.shade700, width: 4),
-                    ),
-                  ),
-                ),
-              ),
-            ],
+          SizedBox(
+            height: 10.0,
           ),
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: <Widget>[
-              GestureDetector(
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => SportRun()),
-                  );
-                },
-                child: Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(40, 5, 30, 0),
+          Expanded(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Container(
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                      image: NetworkImage('https://i.gifer.com/7hhR.gif'),
+                      fit: BoxFit.fitWidth,
+                    ),
+                    color: Colors.white,
+                    borderRadius: BorderRadius.all(Radius.circular(15.0)),
+                    boxShadow: [
+                      BoxShadow(color: Colors.black26, blurRadius: 15.0)
+                    ],
+                  ),
+                  height: 125.0,
+                  width: 250.0,
+                ),
+              ],
+            ),
+          ),
+          Expanded(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                GestureDetector(
+                  onTap: () {
+                    showAlertDialog(context);
+                  },
                   child: Container(
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(5),
-                      color: Colors.white,
                       image: DecorationImage(
                         image: AssetImage('images/sportrun.png'),
                       ),
+                      color: Colors.white,
+                      borderRadius: BorderRadius.all(Radius.circular(15.0)),
+                      boxShadow: [
+                        BoxShadow(color: Colors.black26, blurRadius: 5.0)
+                      ],
                     ),
-                    width: 125.0,
-                    height: 125.0,
-                    // decoration: BoxDecoration(image: DecorationImage(image: ),),
+                    height: 100.0,
+                    width: 100.0,
                   ),
                 ),
-              ),
-              GestureDetector(
-                child: Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(50, 5, 40, 0),
+                SizedBox(
+                  width: 50.0,
+                ),
+                GestureDetector(
+                  onTap: () {
+                    showAlertDialog(context);
+                  },
                   child: Container(
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(5),
-                      color: Colors.white,
                       image: DecorationImage(
                         image: AssetImage('images/walking.png'),
                       ),
+                      color: Colors.white,
+                      borderRadius: BorderRadius.all(Radius.circular(15.0)),
+                      boxShadow: [
+                        BoxShadow(color: Colors.black26, blurRadius: 5.0)
+                      ],
                     ),
-                    width: 125.0,
-                    height: 125.0,
-                    // decoration: BoxDecoration(image: DecorationImage(image: ),),
+                    height: 100.0,
+                    width: 100.0,
                   ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: <Widget>[
-              GestureDetector(
-                child: Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(40, 10, 30, 0),
+          Expanded(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                GestureDetector(
+                  onTap: () {
+                    showAlertDialog(context);
+                  },
                   child: Container(
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(5),
-                      color: Colors.white,
                       image: DecorationImage(
                         image: AssetImage('images/gymnastics.png'),
                       ),
+                      color: Colors.white,
+                      borderRadius: BorderRadius.all(Radius.circular(15.0)),
+                      boxShadow: [
+                        BoxShadow(color: Colors.black26, blurRadius: 5.0)
+                      ],
                     ),
-                    width: 125.0,
-                    height: 125.0,
-                    // decoration: BoxDecoration(image: DecorationImage(image: ),),
+                    height: 100.0,
+                    width: 100.0,
                   ),
                 ),
-              ),
-              GestureDetector(
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => InputPage()),
-                  );
-                },
-                child: Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(50, 10, 40, 0),
+                SizedBox(
+                  width: 50.0,
+                ),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.of(context).push(
+                        MaterialPageRoute(builder: (context) => InputPage()));
+                  },
                   child: Container(
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(5),
-                      color: Colors.white,
                       image: DecorationImage(
                         image: AssetImage('images/scale.png'),
                       ),
+                      color: Colors.white,
+                      borderRadius: BorderRadius.all(Radius.circular(15.0)),
+                      boxShadow: [
+                        BoxShadow(color: Colors.black26, blurRadius: 5.0)
+                      ],
                     ),
-                    width: 125.0,
-                    height: 125.0,
-                    // decoration: BoxDecoration(image: DecorationImage(image: ),),
+                    height: 100.0,
+                    width: 100.0,
                   ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: <Widget>[
-              GestureDetector(
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => Exercise()),
-                  );
-                },
-                child: Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(40, 10, 30, 0),
+          Expanded(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                GestureDetector(
+                  onTap: () {
+                    Navigator.of(context).push(
+                        MaterialPageRoute(builder: (context) => SportRun()));
+                  },
                   child: Container(
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(5),
-                      color: Colors.white,
                       image: DecorationImage(
                         image: AssetImage('images/barbell.png'),
                       ),
+                      color: Colors.white,
+                      borderRadius: BorderRadius.all(Radius.circular(15.0)),
+                      boxShadow: [
+                        BoxShadow(color: Colors.black26, blurRadius: 5.0)
+                      ],
                     ),
-                    width: 125.0,
-                    height: 125.0,
-                    // decoration: BoxDecoration(image: DecorationImage(image: ),),
+                    height: 100.0,
+                    width: 100.0,
                   ),
                 ),
-              ),
-              GestureDetector(
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => LeaderBoard()),
-                  );
-                },
-                child: Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(50, 10, 40, 0),
+                SizedBox(
+                  width: 50.0,
+                ),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.of(context).push(
+                        MaterialPageRoute(builder: (context) => LeaderBoard()));
+                  },
                   child: Container(
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(5),
-                      color: Colors.white,
                       image: DecorationImage(
                         image: AssetImage('images/leaderboard.png'),
                       ),
+                      color: Colors.white,
+                      borderRadius: BorderRadius.all(Radius.circular(15.0)),
+                      boxShadow: [
+                        BoxShadow(color: Colors.black26, blurRadius: 5.0)
+                      ],
                     ),
-                    width: 125.0,
-                    height: 125.0,
-                    // decoration: BoxDecoration(image: DecorationImage(image: ),),
+                    height: 100.0,
+                    width: 100.0,
                   ),
                 ),
-              ),
-            ],
-          )
+              ],
+            ),
+          ),
         ],
       ),
     );

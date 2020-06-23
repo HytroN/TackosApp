@@ -18,9 +18,9 @@ class MyApp extends StatelessWidget {
       DeviceOrientation.portraitUp,
       DeviceOrientation.portraitDown,
     ]);
-    return new MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      color: Colors.blue,
+      color: Colors.lightBlue,
       home: FirstTime(),
     );
   }
@@ -52,9 +52,7 @@ class FirstTimeState extends State<FirstTime> with AfterLayoutMixin<FirstTime> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Text('Loading...'),
-      ),
+      backgroundColor: Colors.orange[300],
     );
   }
 }

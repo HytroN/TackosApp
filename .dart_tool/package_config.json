@@ -122,10 +122,22 @@
       "languageVersion": "2.0"
     },
     {
+      "name": "floating_pullup_card",
+      "rootUri": "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/floating_pullup_card-0.2.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.1"
+    },
+    {
       "name": "flutter",
       "rootUri": "file:///C:/flutter/packages/flutter",
       "packageUri": "lib/",
       "languageVersion": "2.2"
+    },
+    {
+      "name": "flutter_staggered_animations",
+      "rootUri": "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_staggered_animations-0.1.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.1"
     },
     {
       "name": "flutter_svg",
@@ -142,6 +154,12 @@
     {
       "name": "flutter_web_plugins",
       "rootUri": "file:///C:/flutter/packages/flutter_web_plugins",
+      "packageUri": "lib/",
+      "languageVersion": "2.0"
+    },
+    {
+      "name": "font_awesome_flutter",
+      "rootUri": "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/font_awesome_flutter-8.8.1",
       "packageUri": "lib/",
       "languageVersion": "2.0"
     },
@@ -210,6 +228,12 @@
       "rootUri": "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/pedantic-1.9.0",
       "packageUri": "lib/",
       "languageVersion": "2.1"
+    },
+    {
+      "name": "percent_indicator",
+      "rootUri": "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/percent_indicator-2.1.5",
+      "packageUri": "lib/",
+      "languageVersion": "1.19"
     },
     {
       "name": "petitparser",
@@ -320,7 +344,7 @@
       "languageVersion": "2.7"
     }
   ],
-  "generated": "2020-06-22T16:49:22.085796Z",
+  "generated": "2020-06-23T12:57:04.615002Z",
   "generator": "pub",
   "generatorVersion": "2.8.4"
 }
