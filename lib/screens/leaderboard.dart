@@ -92,7 +92,7 @@ class LeaderBoard extends StatelessWidget {
                         child: Column(
                           children: <Widget>[
                             Padding(
-                              padding: const EdgeInsets.only(
+                              padding: EdgeInsets.only(
                                   left: 8.0, right: 8.0, top: 10),
                               child: Container(
                                 height: 75,
@@ -111,17 +111,14 @@ class LeaderBoard extends StatelessWidget {
                                       child: Align(
                                         alignment: Alignment.centerLeft,
                                         child: Padding(
-                                          padding:
-                                              const EdgeInsets.only(right: 0.0),
+                                          padding: EdgeInsets.only(right: 0.0),
                                           child: Row(
                                             children: <Widget>[
                                               Align(
                                                 alignment: Alignment.centerLeft,
                                                 child: Padding(
-                                                  padding:
-                                                      const EdgeInsets.only(
-                                                          left: 15.0,
-                                                          right: 25),
+                                                  padding: EdgeInsets.only(
+                                                      left: 15.0, right: 25),
                                                   child: Row(
                                                     children: <Widget>[
                                                       CircleAvatar(
@@ -197,7 +194,7 @@ class LeaderBoard extends StatelessWidget {
                               ),
                             ),
                             Padding(
-                              padding: const EdgeInsets.only(
+                              padding: EdgeInsets.only(
                                   left: 8.0, right: 8.0, top: 10),
                               child: Container(
                                 height: 75,
@@ -216,17 +213,14 @@ class LeaderBoard extends StatelessWidget {
                                       child: Align(
                                         alignment: Alignment.centerLeft,
                                         child: Padding(
-                                          padding:
-                                              const EdgeInsets.only(right: 0.0),
+                                          padding: EdgeInsets.only(right: 0.0),
                                           child: Row(
                                             children: <Widget>[
                                               Align(
                                                 alignment: Alignment.centerLeft,
                                                 child: Padding(
-                                                  padding:
-                                                      const EdgeInsets.only(
-                                                          left: 15.0,
-                                                          right: 25),
+                                                  padding: EdgeInsets.only(
+                                                      left: 15.0, right: 25),
                                                   child: Row(
                                                     children: <Widget>[
                                                       CircleAvatar(
@@ -302,7 +296,7 @@ class LeaderBoard extends StatelessWidget {
                               ),
                             ),
                             Padding(
-                              padding: const EdgeInsets.only(
+                              padding: EdgeInsets.only(
                                   left: 8.0, right: 8.0, top: 10),
                               child: Container(
                                 height: 75,
@@ -321,17 +315,14 @@ class LeaderBoard extends StatelessWidget {
                                       child: Align(
                                         alignment: Alignment.centerLeft,
                                         child: Padding(
-                                          padding:
-                                              const EdgeInsets.only(right: 0.0),
+                                          padding: EdgeInsets.only(right: 0.0),
                                           child: Row(
                                             children: <Widget>[
                                               Align(
                                                 alignment: Alignment.centerLeft,
                                                 child: Padding(
-                                                  padding:
-                                                      const EdgeInsets.only(
-                                                          left: 15.0,
-                                                          right: 25),
+                                                  padding: EdgeInsets.only(
+                                                      left: 15.0, right: 25),
                                                   child: Row(
                                                     children: <Widget>[
                                                       CircleAvatar(
@@ -407,7 +398,7 @@ class LeaderBoard extends StatelessWidget {
                               ),
                             ),
                             Padding(
-                              padding: const EdgeInsets.only(
+                              padding: EdgeInsets.only(
                                   left: 8.0, right: 8.0, top: 10),
                               child: Container(
                                 height: 75,
@@ -426,17 +417,14 @@ class LeaderBoard extends StatelessWidget {
                                       child: Align(
                                         alignment: Alignment.centerLeft,
                                         child: Padding(
-                                          padding:
-                                              const EdgeInsets.only(right: 0.0),
+                                          padding: EdgeInsets.only(right: 0.0),
                                           child: Row(
                                             children: <Widget>[
                                               Align(
                                                 alignment: Alignment.centerLeft,
                                                 child: Padding(
-                                                  padding:
-                                                      const EdgeInsets.only(
-                                                          left: 15.0,
-                                                          right: 25),
+                                                  padding: EdgeInsets.only(
+                                                      left: 15.0, right: 25),
                                                   child: Row(
                                                     children: <Widget>[
                                                       CircleAvatar(
@@ -513,7 +501,7 @@ class LeaderBoard extends StatelessWidget {
                               ),
                             ),
                             Padding(
-                              padding: const EdgeInsets.only(
+                              padding: EdgeInsets.only(
                                   left: 8.0, right: 8.0, top: 10),
                               child: Container(
                                 height: 75,
@@ -534,17 +522,14 @@ class LeaderBoard extends StatelessWidget {
                                       child: Align(
                                         alignment: Alignment.centerLeft,
                                         child: Padding(
-                                          padding:
-                                              const EdgeInsets.only(right: 0.0),
+                                          padding: EdgeInsets.only(right: 0.0),
                                           child: Row(
                                             children: <Widget>[
                                               Align(
                                                 alignment: Alignment.centerLeft,
                                                 child: Padding(
-                                                  padding:
-                                                      const EdgeInsets.only(
-                                                          left: 15.0,
-                                                          right: 25),
+                                                  padding: EdgeInsets.only(
+                                                      left: 15.0, right: 25),
                                                   child: Row(
                                                     children: <Widget>[
                                                       CircleAvatar(
@@ -632,7 +617,7 @@ class LeaderBoard extends StatelessWidget {
                         child: Column(
                           children: <Widget>[
                             Padding(
-                              padding: const EdgeInsets.only(
+                              padding: EdgeInsets.only(
                                   left: 8.0, right: 8.0, top: 10),
                               child: Container(
                                 height: 75,
@@ -651,16 +636,14 @@ class LeaderBoard extends StatelessWidget {
                                       child: Align(
                                         alignment: Alignment.centerLeft,
                                         child: Padding(
-                                          padding:
-                                              const EdgeInsets.only(right: 0.0),
+                                          padding: EdgeInsets.only(right: 0.0),
                                           child: Row(
                                             children: <Widget>[
                                               Align(
                                                 alignment: Alignment.centerLeft,
                                                 child: Padding(
-                                                  padding:
-                                                      const EdgeInsets.only(
-                                                          right: 25),
+                                                  padding: EdgeInsets.only(
+                                                      right: 25),
                                                   child: Row(
                                                     children: <Widget>[
                                                       Container(
@@ -740,7 +723,7 @@ class LeaderBoard extends StatelessWidget {
                               ),
                             ),
                             Padding(
-                              padding: const EdgeInsets.only(
+                              padding: EdgeInsets.only(
                                   left: 8.0, right: 8.0, top: 10),
                               child: Container(
                                 height: 75,
@@ -759,16 +742,14 @@ class LeaderBoard extends StatelessWidget {
                                       child: Align(
                                         alignment: Alignment.centerLeft,
                                         child: Padding(
-                                          padding:
-                                              const EdgeInsets.only(right: 0.0),
+                                          padding: EdgeInsets.only(right: 0.0),
                                           child: Row(
                                             children: <Widget>[
                                               Align(
                                                 alignment: Alignment.centerLeft,
                                                 child: Padding(
-                                                  padding:
-                                                      const EdgeInsets.only(
-                                                          right: 25),
+                                                  padding: EdgeInsets.only(
+                                                      right: 25),
                                                   child: Row(
                                                     children: <Widget>[
                                                       Container(
@@ -848,7 +829,7 @@ class LeaderBoard extends StatelessWidget {
                               ),
                             ),
                             Padding(
-                              padding: const EdgeInsets.only(
+                              padding: EdgeInsets.only(
                                   left: 8.0, right: 8.0, top: 10),
                               child: Container(
                                 height: 75,
@@ -867,16 +848,14 @@ class LeaderBoard extends StatelessWidget {
                                       child: Align(
                                         alignment: Alignment.centerLeft,
                                         child: Padding(
-                                          padding:
-                                              const EdgeInsets.only(right: 0.0),
+                                          padding: EdgeInsets.only(right: 0.0),
                                           child: Row(
                                             children: <Widget>[
                                               Align(
                                                 alignment: Alignment.centerLeft,
                                                 child: Padding(
-                                                  padding:
-                                                      const EdgeInsets.only(
-                                                          right: 25),
+                                                  padding: EdgeInsets.only(
+                                                      right: 25),
                                                   child: Row(
                                                     children: <Widget>[
                                                       Container(
@@ -956,7 +935,7 @@ class LeaderBoard extends StatelessWidget {
                               ),
                             ),
                             Padding(
-                              padding: const EdgeInsets.only(
+                              padding: EdgeInsets.only(
                                   left: 8.0, right: 8.0, top: 10),
                               child: Container(
                                 height: 75,
@@ -975,16 +954,14 @@ class LeaderBoard extends StatelessWidget {
                                       child: Align(
                                         alignment: Alignment.centerLeft,
                                         child: Padding(
-                                          padding:
-                                              const EdgeInsets.only(right: 0.0),
+                                          padding: EdgeInsets.only(right: 0.0),
                                           child: Row(
                                             children: <Widget>[
                                               Align(
                                                 alignment: Alignment.centerLeft,
                                                 child: Padding(
-                                                  padding:
-                                                      const EdgeInsets.only(
-                                                          right: 25),
+                                                  padding: EdgeInsets.only(
+                                                      right: 25),
                                                   child: Row(
                                                     children: <Widget>[
                                                       Container(
@@ -1064,7 +1041,7 @@ class LeaderBoard extends StatelessWidget {
                               ),
                             ),
                             Padding(
-                              padding: const EdgeInsets.only(
+                              padding: EdgeInsets.only(
                                   left: 8.0, right: 8.0, top: 10),
                               child: Container(
                                 height: 75,
@@ -1083,16 +1060,14 @@ class LeaderBoard extends StatelessWidget {
                                       child: Align(
                                         alignment: Alignment.centerLeft,
                                         child: Padding(
-                                          padding:
-                                              const EdgeInsets.only(right: 0.0),
+                                          padding: EdgeInsets.only(right: 0.0),
                                           child: Row(
                                             children: <Widget>[
                                               Align(
                                                 alignment: Alignment.centerLeft,
                                                 child: Padding(
-                                                  padding:
-                                                      const EdgeInsets.only(
-                                                          right: 25),
+                                                  padding: EdgeInsets.only(
+                                                      right: 25),
                                                   child: Row(
                                                     children: <Widget>[
                                                       Container(
@@ -1172,7 +1147,7 @@ class LeaderBoard extends StatelessWidget {
                               ),
                             ),
                             Padding(
-                              padding: const EdgeInsets.only(
+                              padding: EdgeInsets.only(
                                   left: 8.0, right: 8.0, top: 10),
                               child: Container(
                                 height: 75,
@@ -1191,16 +1166,14 @@ class LeaderBoard extends StatelessWidget {
                                       child: Align(
                                         alignment: Alignment.centerLeft,
                                         child: Padding(
-                                          padding:
-                                              const EdgeInsets.only(right: 0.0),
+                                          padding: EdgeInsets.only(right: 0.0),
                                           child: Row(
                                             children: <Widget>[
                                               Align(
                                                 alignment: Alignment.centerLeft,
                                                 child: Padding(
-                                                  padding:
-                                                      const EdgeInsets.only(
-                                                          right: 25),
+                                                  padding: EdgeInsets.only(
+                                                      right: 25),
                                                   child: Row(
                                                     children: <Widget>[
                                                       Container(

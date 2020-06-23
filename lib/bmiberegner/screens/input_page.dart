@@ -187,7 +187,7 @@ class _InputPageState extends State<InputPage> {
                       child: Slider(
                         value: height.toDouble(),
                         min: 120.0,
-                        max: 220.0,
+                        max: 200.0,
                         onChanged: (double newValue) {
                           setState(() {
                             height = newValue.round();

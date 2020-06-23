@@ -24,7 +24,7 @@ class IntroScreenState extends State<IntroScreen> {
             "Velkommen til Tackos Motion, bevæg dig og bliv belønnet med point til nå første pladsen før dine venner.",
         pathImage: 'images/phonecheck.gif',
         widthImage: 250.0,
-        heightImage: 250.0,
+        heightImage: 200.0,
         backgroundColor: Color(0xfff5a623),
       ),
     );

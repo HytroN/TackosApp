@@ -1,0 +1,40 @@
+Date : 2020-06-23 17:48:26
+Directory : d:\flutterproject\TackosApp\lib
+Total : 11 files,  2750 codes, 15 comments, 70 blanks, all 2835 lines
+
+Languages
++----------+------------+------------+------------+------------+------------+
+| language | files      | code       | comment    | blank      | total      |
++----------+------------+------------+------------+------------+------------+
+| Dart     |         11 |      2,750 |         15 |         70 |      2,835 |
++----------+------------+------------+------------+------------+------------+
+
+Directories
++-----------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                  | files      | code       | comment    | blank      | total      |
++-----------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                     |         11 |      2,750 |         15 |         70 |      2,835 |
+| bmiberegner                                                           |          3 |        520 |          0 |         17 |        537 |
+| bmiberegner\screens                                                   |          2 |        491 |          0 |         10 |        501 |
+| screens                                                               |          6 |      1,953 |         10 |         36 |      1,999 |
+| widgets                                                               |          1 |        204 |          4 |          8 |        216 |
+| widgets\auth                                                          |          1 |        204 |          4 |          8 |        216 |
++-----------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++-----------------------------------------------------------------------+----------+------------+------------+------------+------------+
+| filename                                                              | language | code       | comment    | blank      | total      |
++-----------------------------------------------------------------------+----------+------------+------------+------------+------------+
+| d:\flutterproject\TackosApp\lib\bmiberegner\calc_brain.dart           | Dart     |         29 |          0 |          7 |         36 |
+| d:\flutterproject\TackosApp\lib\bmiberegner\screens\input_page.dart   | Dart     |        397 |          0 |          6 |        403 |
+| d:\flutterproject\TackosApp\lib\bmiberegner\screens\results_page.dart | Dart     |         94 |          0 |          4 |         98 |
+| d:\flutterproject\TackosApp\lib\main.dart                             | Dart     |         73 |          1 |          9 |         83 |
+| d:\flutterproject\TackosApp\lib\screens\auth_screen.dart              | Dart     |         75 |          0 |          8 |         83 |
+| d:\flutterproject\TackosApp\lib\screens\exercise.dart                 | Dart     |        218 |          3 |          6 |        227 |
+| d:\flutterproject\TackosApp\lib\screens\intro_slider.dart             | Dart     |         64 |          1 |          8 |         73 |
+| d:\flutterproject\TackosApp\lib\screens\leaderboard.dart              | Dart     |      1,296 |          1 |          2 |      1,299 |
+| d:\flutterproject\TackosApp\lib\screens\mian_page.dart                | Dart     |        300 |          5 |         10 |        315 |
+| d:\flutterproject\TackosApp\lib\screens\workouts.dart                 | Dart     |          0 |          0 |          2 |          2 |
+| d:\flutterproject\TackosApp\lib\widgets\auth\auth_form.dart           | Dart     |        204 |          4 |          8 |        216 |
+| Total                                                                 |          |      2,750 |         15 |         70 |      2,835 |
++-----------------------------------------------------------------------+----------+------------+------------+------------+------------+
