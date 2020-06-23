@@ -7,11 +7,11 @@ class IntroScreen extends StatefulWidget {
   IntroScreen({Key key}) : super(key: key);
 
   @override
-  IntroScreenState createState() => new IntroScreenState();
+  IntroScreenState createState() => IntroScreenState();
 }
 
 class IntroScreenState extends State<IntroScreen> {
-  List<Slide> slides = new List();
+  List<Slide> slides = List();
 
   @override
   void initState() {
@@ -47,10 +47,6 @@ class IntroScreenState extends State<IntroScreen> {
         backgroundColor: Colors.lightBlue,
       ),
     );
-  }
-
-  void onDonePress() {
-    // Do what you want
   }
 
   @override
