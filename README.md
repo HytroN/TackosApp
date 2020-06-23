@@ -3,7 +3,7 @@
 ### Projektet er udviklet af Rasmus Dencker, David Vos og Charlie T. Nielsen.
 
 ## Nogle billeder af vores produkt
-[![Image from Gyazo](https://i.gyazo.com/5d922dff3831f38e295e19cb161aa62e.gif)](https://gyazo.com/5d922dff3831f38e295e19cb161aa62e) [![Image from Gyazo](https://i.gyazo.com/3469358a8af5cbdb65a8e7048476c569.gif)](https://gyazo.com/3469358a8af5cbdb65a8e7048476c569)
+[![Image from Gyazo](https://i.gyazo.com/5d922dff3831f38e295e19cb161aa62e.gif)](https://gyazo.com/5d922dff3831f38e295e19cb161aa62e)
 
 # Hvordan man installere flutter, dart og emulator fra Visual Studio
 
