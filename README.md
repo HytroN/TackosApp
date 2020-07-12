@@ -1,6 +1,6 @@
 # Tackos Motion
 
-### Projektet er udviklet af Rasmus Dencker, David Vos og Charlie T. Nielsen.
+### Projektet er udviklet af Rasmus, David og Charlie.
 
 ## Nogle billeder af vores produkt
 [![Image from Gyazo](https://i.gyazo.com/5d922dff3831f38e295e19cb161aa62e.gif)](https://gyazo.com/5d922dff3831f38e295e19cb161aa62e)
